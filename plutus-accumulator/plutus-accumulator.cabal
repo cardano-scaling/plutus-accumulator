@@ -1,0 +1,28 @@
+cabal-version: 3.4
+name:          plutus-accumulator
+version:       0.1.0.0
+license:       Apache-2.0
+build-type:    Simple
+
+library
+  hs-source-dirs:  lib
+  exposed-modules: Lib
+  build-depends:
+    , base                         >=4.9   && <5
+
+benchmark bench
+  type:           exitcode-stdio-1.0
+  main-is:        Bench.hs
+  hs-source-dirs: bench
+  build-depends:
+    , base >=4.9     && <5
+    , plutus-accumulator
+
+test-suite test
+  type:           exitcode-stdio-1.0
+  main-is:        Test.hs
+  hs-source-dirs: test
+  build-depends:
+    , base >=4.9     && <5
+    , plutus-accumulator
+ 
