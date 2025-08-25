@@ -20,3 +20,27 @@ packages:
 
 tests: true
 benchmarks: true
+
+source-repository-package
+  type: git
+  location: https://github.com/IntersectMBO/plutus
+  tag: d7d198d02187382862b775c9b94d50fb2e1d5eb1
+  --sha256: sha256-CNGHQgfAtzwJLY+R/TLZ1CkfgjvaLuaQ4QDIrmdtf5g=
+  subdir:
+    plutus-core
+    plutus-tx
+
+source-repository-package
+  type: git
+  location: https://github.com/intersectMBO/cardano-base
+  tag: 971708b0142f86507e8694351186551ac8753cf0
+  --sha256: sha256-28LmiDqJMdIIgSwOz+d8k0ftxNZQr/TuXh7RuFy9tpQ=
+  subdir:
+    cardano-crypto-class
+    cardano-crypto-praos
+
+allow-newer:
+  -- https://github.com/phadej/vec/issues/121
+  ral:QuickCheck,
+  fin:QuickCheck,
+  bin:QuickCheck,

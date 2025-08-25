@@ -1,4 +1,2 @@
-import Lib (helloWorld)
-
 main :: IO ()
-main = putStrLn $ helloWorld ++ " from test"
+main = putStrLn $ "hello world " ++ "from test"

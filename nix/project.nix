@@ -18,7 +18,6 @@ let
         ghc9102.compiler-nix-name = "ghc9102";
         ghc9122.compiler-nix-name = "ghc9122";
       };
-
       inputMap = { "https://chap.intersectmbo.org/" = inputs.CHaP; };
 
       modules = [{
