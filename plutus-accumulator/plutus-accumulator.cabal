@@ -7,9 +7,9 @@ build-type:    Simple
 library
   hs-source-dirs:  lib
   exposed-modules:
-    -- Offchain
     Plutus.Crypto.Accumulator
     Plutus.Crypto.BlsUtils
+    Offchain
   build-depends:
     , base                         >=4.9   && <5
     , plutus-core
@@ -20,6 +20,8 @@ benchmark bench
   main-is:        Main.hs
   hs-source-dirs: bench
   other-modules:
+    Accumulator.Run
+    Accumulator.Scripts
     Bls.Run
     Bls.Scripts
   build-depends:
@@ -32,6 +34,7 @@ benchmark bench
     , plutus-accumulator
     , hedgehog
     , bytestring
+    , aeson
 
 -- test-suite test
   -- type:           exitcode-stdio-1.0
