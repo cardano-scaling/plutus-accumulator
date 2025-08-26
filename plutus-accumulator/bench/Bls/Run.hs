@@ -23,7 +23,7 @@ runBls :: Handle -> IO ()
 runBls h = do
     hPrintf h "\n\nBLS Scalar Field Operation Benchmarks\n\n"
 
-    let ns = [1 .. 10]
+    let ns = [1,10,20,30,40,50,60,70,80,90,100]
 
     let bench opName scriptGen = do
             hPrintf h "%s\n\n" opName
