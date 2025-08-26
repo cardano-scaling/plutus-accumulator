@@ -17,21 +17,29 @@ library
 
 benchmark bench
   type:           exitcode-stdio-1.0
-  main-is:        Bench.hs
+  main-is:        Main.hs
   hs-source-dirs: bench
+  other-modules:
+    Bls.Run
+    Bls.Scripts
   build-depends:
     , base >=4.9     && <5
     , plutus-core
     , plutus-tx
+    , plutus-tx-plugin
+    , plutus-ledger-api
+    , plutus-benchmark:plutus-benchmark-common
     , plutus-accumulator
+    , hedgehog
+    , bytestring
 
-test-suite test
-  type:           exitcode-stdio-1.0
-  main-is:        Test.hs
-  hs-source-dirs: test
-  build-depends:
-    , base >=4.9     && <5
-    , plutus-core
-    , plutus-tx
-    , plutus-accumulator
+-- test-suite test
+  -- type:           exitcode-stdio-1.0
+  -- main-is:        Test.hs
+  -- hs-source-dirs: test
+  -- build-depends:
+    -- , base >=4.9     && <5
+    -- , plutus-core
+    -- , plutus-tx
+    -- , plutus-accumulator
  
