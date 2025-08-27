@@ -24,8 +24,8 @@ benchmarks: true
 source-repository-package
   type: git
   location: https://github.com/IntersectMBO/plutus
-  tag: fb5d61fa18bdacfabe8fe000f135198d22882284
-  --sha256: sha256-I0TUCfMukbYZjXwYvY4q3B1NkySgisuTkjm05xRFbKc=
+  tag: 2ac664e0b6f210d1b1baf8286b4142eab1ca7f4d
+  --sha256: sha256-2ETAeEIS12ycVfcrWHGwd8BJ584DshFAa2Hsa25EbIY= 
   subdir:
     plutus-core
     plutus-tx

@@ -71,7 +71,7 @@ runCheckMembership h = do
         accBs = P.bls12_381_G2_compress . getG2Commitment crsG2 . getFinalPoly . map (mkScalar . P.byteStringToInteger BigEndian) $ setBs
     hPrintf h "n membership proofs aggregated verification\n\n"
     printHeader h
-    mapM_ (\x -> printCostsCheckMembership h x crsG1 crsG2 accBs setBs) ([1, 2, 3, 4] <> [5, 10 .. 45])
+    mapM_ (\x -> printCostsCheckMembership h x crsG1 crsG2 accBs setBs) ([1, 2, 3, 4] <> [5, 10 .. 70])
     hPrintf h "\n\n"
 
 printCostsCheckNonMembership ::
@@ -121,5 +121,5 @@ runCheckNonMembership h = do
         accBs = P.bls12_381_G2_compress . getG2Commitment crsG2 . getFinalPoly . map (mkScalar . P.byteStringToInteger BigEndian) $ setBs
     hPrintf h "n non-membership proofs aggregated verification\n\n"
     printHeader h
-    mapM_ (\x -> printCostsCheckNonMembership h x crsG1 crsG2 accBs setBs) ([1, 2, 3, 4] <> [5, 10 .. 45])
+    mapM_ (\x -> printCostsCheckNonMembership h x crsG1 crsG2 accBs setBs) ([1, 2, 3, 4] <> [5, 10 .. 70])
     hPrintf h "\n\n"
