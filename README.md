@@ -70,5 +70,6 @@ n non-membership proofs aggregated verification
 These percentages are given in comparison against the mainnet parameters. You can run the benchmark via
 
 ```bash
-nix run .#bench-verifier
+nix develop github:input-output-hk/devx#ghc96-iog
+cabal run plutus-accumulator:bench
 ```
