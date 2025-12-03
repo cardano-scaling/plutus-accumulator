@@ -11,28 +11,15 @@ repository cardano-haskell-packages
 
 index-state:
   -- Bump both the following dates if you need newer packages from Hackage
-  , hackage.haskell.org 2025-08-20T09:24:19Z
+  , hackage.haskell.org 2025-12-03T12:52:11Z
   -- Bump this if you need newer packages from CHaP
-  , cardano-haskell-packages 2025-08-23T15:05:21Z
+  , cardano-haskell-packages 2025-12-01T07:41:27Z
 
 packages: 
   plutus-accumulator 
 
 tests: true
 benchmarks: true
-
-source-repository-package
-  type: git
-  location: https://github.com/IntersectMBO/plutus
-  tag: 2ac664e0b6f210d1b1baf8286b4142eab1ca7f4d
-  --sha256: sha256-2ETAeEIS12ycVfcrWHGwd8BJ584DshFAa2Hsa25EbIY= 
-  subdir:
-    plutus-core
-    plutus-tx
-    plutus-benchmark
-    plutus-metatheory
-    plutus-tx-plugin
-    plutus-ledger-api
 
 allow-newer:
   -- https://github.com/phadej/vec/issues/121
