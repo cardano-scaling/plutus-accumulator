@@ -402,19 +402,19 @@ getFinalPoly = foldl polyMulBinom (ScalarPoly [one])
 -- Given a list of G1 elements, we can create a commitment to a polynomial over G1.
 {-# INLINEABLE getG1Commitment #-}
 getG1Commitment :: [BuiltinBLS12_381_G1_Element] -> ScalarPoly -> BuiltinBLS12_381_G1_Element
--- getG1Commitment crsG1 (ScalarPoly poly) =
---     foldl bls12_381_G1_add zero
---         $ zipWith (bls12_381_G1_scalarMul . unScalar) poly crsG1
-getG1Commitment crsG1 (ScalarPoly poly) = bls12_381_G1_multiScalarMul poly' crsG1
-    where
-        poly' = map unScalar poly
+getG1Commitment crsG1 (ScalarPoly poly) =
+    foldl bls12_381_G1_add zero
+        $ zipWith (bls12_381_G1_scalarMul . unScalar) poly crsG1
+-- getG1Commitment crsG1 (ScalarPoly poly) = bls12_381_G1_multiScalarMul poly' crsG1
+--     where
+--         poly' = map unScalar poly
 
 -- Given a list of G2 elements, we can create a commitment to a polynomial over G2.
 {-# INLINEABLE getG2Commitment #-}
 getG2Commitment :: [BuiltinBLS12_381_G2_Element] -> ScalarPoly -> BuiltinBLS12_381_G2_Element
--- getG2Commitment crsG2 (ScalarPoly poly) =
---     foldl bls12_381_G2_add zero
---         $ zipWith (bls12_381_G2_scalarMul . unScalar) poly crsG2
-getG2Commitment crsG2 (ScalarPoly poly) = bls12_381_G2_multiScalarMul poly' crsG2
-    where
-        poly' = map unScalar poly
+getG2Commitment crsG2 (ScalarPoly poly) =
+    foldl bls12_381_G2_add zero
+        $ zipWith (bls12_381_G2_scalarMul . unScalar) poly crsG2
+-- getG2Commitment crsG2 (ScalarPoly poly) = bls12_381_G2_multiScalarMul poly' crsG2
+--     where
+--         poly' = map unScalar poly
